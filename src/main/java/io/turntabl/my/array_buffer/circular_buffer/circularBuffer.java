@@ -19,10 +19,10 @@ try {
     }
     else {
         if (item < capacity) {
-            synchronized (lock) {
+            //synchronized (lock) {
                 queue.add(item);
                  item++;
-            }
+           // }
             System.out.println("Item_" + item + " added");
         }
     Thread.sleep(1000);
@@ -38,10 +38,10 @@ try {
         System.out.println("Circular Buffer is empty! Please wait...");
     }
             System.out.println("Item_" + item + " removed");
-    synchronized (lock){
+    //synchronized (lock){
         queue.remove(item);
             item--;
-    }
+   // }
     Thread.sleep(1000);
     Thread.yield();
 } catch (Exception e) {
